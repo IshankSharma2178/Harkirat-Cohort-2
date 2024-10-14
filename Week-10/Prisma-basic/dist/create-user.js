@@ -13,11 +13,19 @@ const client_1 = require("@prisma/client");
 const prisma = new client_1.PrismaClient();
 function main() {
     return __awaiter(this, void 0, void 0, function* () {
-        // ... you will write your Prisma Client queries here
         yield prisma.user.create({
             data: {
                 email: "snow@gmail.com",
-                name: "Jhon Snow"
+                name: "Jhon Snow",
+                // posts:{
+                //   create :[{
+                //     title: "Snow title 1"
+                //   },
+                //   {
+                //     title:"Snow title 2"
+                //   },
+                // ]
+                // }
             }
         });
     });
