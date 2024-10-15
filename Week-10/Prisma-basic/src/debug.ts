@@ -12,6 +12,6 @@ async function main() {
 
 main();
 
-prisma.$on("query", async (e:any) => {
-    console.log(`${e.query} ${e.params}`);
-});
+// prisma.$on("query", async (e:any) => {
+//     console.log(`${e.query} ${e.params}`);
+// });
