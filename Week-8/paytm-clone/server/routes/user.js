@@ -5,15 +5,12 @@ const {User,Account} = require('../db');
 const jwt = require('jsonwebtoken');
 require('dotenv').config()
 const {authMiddleware} = require('../middleware');
+const { signUpSchema } = require("@ishank_/common");
+
 
 const JWT_SECRET = process.env.JWT_SECRET
 
-const signUpSchema=zod.object({
-    userName:zod.string().optional(),
-    password:zod.string().optional(),
-    firstName:zod.string().optional(),
-    lastName:zod.string().optional(), 
-})
+
 
 const updateSchema = zod.object({
     password:zod.string().optional(),
